@@ -1,0 +1,20 @@
+class Main {
+    
+    public static void main(String[] args) {
+        
+        String NamaLengkap="Muhammad Rizal Kafidalloh";
+        char Inisial='M';
+        Long NRP=5002251001l;
+        String Usia=" 18";
+        String Kelas=" Algoritma dan Pemrograman Komputer A";
+        Boolean StatusKeaktifan=true;
+        
+        System.out.println("Nama Lengkap : " +NamaLengkap);
+        System.out.println("Inisial : " +Inisial);
+        System.out.println("NRP : " +NRP);
+        System.out.println("Usia :" +Usia);
+        System.out.println("Kelas :" +Kelas);
+        System.out.println("Status Keaktifan :" +StatusKeaktifan);
+    }
+    
+}
