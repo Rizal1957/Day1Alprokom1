@@ -1,0 +1,29 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int h;
+        System.out.println("Masukkan nilai x");
+        Scanner s=new Scanner(System.in);
+        h=s.nextInt();
+        
+        int k;
+        System.out.println("Masukkan nilai y");
+        k=s.nextInt();
+        
+        int r;
+        System.out.println("Masukkan nilai jari-jari");
+        r=s.nextInt();
+        
+        int A=(-2)*h;
+        int B=(-2)*k;
+        int C=(h^2)+(k^2)-(r^2);
+        
+        System.out.print("Titik pusat lingkaran di (" +h= ", +"k+");
+        System.out.println(" dan berjari-jari" +r);
+        System.out.print("Maka persamaan lingkarannya adalah x^2 + y^2");
+        System.out.printl(" +(A >= 0 ? "+ " +A : "-""+Math.abs(A)) + "x" +(B>=0? "+ ") +B : "- "+Math.abs(B)) + "y" + (C>=0?"+"+C:"-"=Math.abs((C)))+"=0;
+    }
+}
