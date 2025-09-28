@@ -1,0 +1,18 @@
+public class Main{
+	public static void main(String[] args) {
+	 boolean[] values={true,false};
+        System.out.println("|   p   |   q   |   !p  |   !q  | p ^ q | !(p ^ q) | !p v !q | !(p v q) <=> (!p v !q) |  ");
+        System.out.println("|-------------------------------------------------------------------------------------|");
+        for (boolean p : values){
+            for (boolean q : values){
+                boolean notp=!p;
+                boolean notq=!q;
+                boolean andpq=p&&q;
+                boolean notandpq=!andpq;
+                boolean ornotpnotq=notp||notq;
+                boolean equivalence=(notandpq==ornotpnotq);
+                System.out.printf("| %-5b | %-5b | %-5b | %-5b | %-5b | %-9b| %-8b| %-22b |\n",p,q,notp,notq,andpq,notandpq,ornotpnotq,equivalence);
+            }
+        }
+    }
+}
