@@ -7,11 +7,11 @@ public class Main{
             for (boolean q : values){
                 boolean notp=!p;
                 boolean notq=!q;
-                boolean andpq=p&&q;
-                boolean notandpq=!andpq;
-                boolean ornotpnotq=notp||notq;
-                boolean equivalence=(notandpq==ornotpnotq);
-                System.out.printf("| %-5b | %-5b | %-5b | %-5b | %-5b | %-9b| %-8b| %-22b |\n",p,q,notp,notq,andpq,notandpq,ornotpnotq,equivalence);
+                boolean pandq=p&&q;
+                boolean notpandq=!pandq;
+                boolean notpornotq=notp||notq;
+                boolean ekivalen=(notpandq==notpornotq);
+                System.out.printf("| %-5b | %-5b | %-5b | %-5b | %-5b | %-9b| %-8b| %-22b |\n",p,q,notp,notq,pandq,notpandq,notpornotq,ekivalen);
             }
         }
     }
