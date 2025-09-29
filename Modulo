@@ -1,0 +1,12 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Masukkan sebuah angka");
+        
+        int x=s.nextInt();
+        int y=2;
+        int hasil=x%y;
+        System.out.println(hasil==0? "Maka angka tersebut termasuk bilangan genap":"Maka angka tersebut bukanlah bilangan genap");
+    }
+}
