@@ -2,21 +2,28 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Scanner s=new Scanner (System.in);
-        System.out.println("Apakah anda adalah anggota")
+        System.out.println("Apakah anda adalah anggota");
         boolean a=s.nextBoolean();
         System.out.println("Masukkan jumlah pembelian anda");
-        String beli="b";
-        double d1=9*b/10;
-        int g=b-d1;
+        Scanner x=new Scanner (System.in);
+        double b=x.nextDouble();
+        double d1=b/10;
+        double g=b-d1;
         double d2=g*15/100;
-        String h1="b-d1";
-        String h2="b-d2";
+        double f=d1+d2;
+        double h1=b-f;
         
-        if (a==True){
+        if (a){
             if (b<100000){
             System.out.println("Selamat, anda mendapat diskon sebesar"+d1);
+            System.out.println("Kini, anda hanya membayar sebesar RP."+g);
             }
-            else System.out.println("Selamat, anda mendapatkan diskon sebesar");
+            else System.out.println("Selamat, anda mendapatkan diskon sebesar RP."+h1);
         }
+        else if(b>100000){
+            System.out.println("Selamat, anda mendapatkan diskon sebesar RP."+d1);
+            System.out.println("Kini, Anda hanya membayar sebesar RP."+g);
+        }
+        else System.out.println("Maaf, anda tidak mendapatkan diskon");
     }
 }
