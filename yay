@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner s=new Scanner (System.in);
+        System.out.println("Apakah anda adalah anggota")
+        boolean a=s.nextBoolean();
+        System.out.println("Masukkan jumlah pembelian anda");
+        String beli="b";
+        double d1=9*b/10;
+        int g=b-d1;
+        double d2=g*15/100;
+        String h1="b-d1";
+        String h2="b-d2";
+        
+        if (a==True){
+            if (b<100000){
+            System.out.println("Selamat, anda mendapat diskon sebesar"+d1);
+            }
+            else System.out.println("Selamat, anda mendapatkan diskon sebesar");
+        }
+    }
+}
