@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Pilih status anda :");
+        System.out.println("1. Saya adalah anggota");
+        System.out.println("2. Saya bukan anggota");
+        System.out.print("Status saya adalah : ");
+        int status = s.nextInt();
+
+        System.out.print("Masukkan jumlah pembelian anda : RP.");
+        double b = s.nextDouble();
+
+        double d1 = b/10;    // diskon 10%
+        double g = b - d1;          // harga setelah diskon 10%
+        double d2 = g * 15 / 100;   // diskon tambahan 15%
+        double f = d1 + d2;         // total diskon
+        double h1 = b - f;          // harga akhir
+
+        if (status == 1) { // anggota
+            if (b < 100000) {
+                System.out.println("Selamat, anda mendapat diskon sebesar RP."+Math.round(d1));
+                System.out.println("Kini, anda hanya membayar sebesar RP." +Math.round(g));
+            } else {
+                System.out.println("Selamat, anda mendapatkan diskon sebesar RP." +Math.round(f));
+                System.out.println("Kini, anda hanya membayar sebesar RP. " +Math.round(h1));
+            }
+        } else if (status == 2) { // bukan anggota
+            if (b > 100000) {
+                System.out.println("Selamat, anda mendapatkan diskon sebesar RP." +Math.round(d1));
+                System.out.println("Kini, Anda hanya membayar sebesar RP." +Math.round(g));
+            } else {
+                System.out.println("Maaf, anda tidak mendapatkan diskon");
+            }
+        } else {
+            System.out.println("Yang bener dong!!");
+        }
+    }
+}
