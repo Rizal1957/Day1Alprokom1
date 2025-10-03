@@ -1,7 +1,5 @@
-package apayaa;
 import java.util.Scanner;
-
-public class ApaYaa {
+public class Main {
 	
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -20,7 +18,7 @@ public class ApaYaa {
         int k2 = (int) k1;
         
         int t1=(int)x;
-        long t2=t1-5002000000;
+        long t2=t1-(k2*1000000);
         double t3=t2/10000;
         
         System.out.println("Berikut adalah data mahasiswa anda");
