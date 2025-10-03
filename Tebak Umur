@@ -1,0 +1,16 @@
+package apayaa;
+import javax.swing.JOptionPane;
+
+public class ApaYaa {
+	public static void main(String[] args) {
+	    String n=JOptionPane.showInputDialog("Masukkan Nama Anda : ");
+            String u=JOptionPane.showInputDialog("Berapa umurmu jika ditambah 40?");
+            String y=JOptionPane.showInputDialog("Berapa umurmu jika dikurangi 10");
+            
+            int a=Integer.parseInt(u);
+            int b=Integer.parseInt(y);
+            int c=a-40;
+            
+            JOptionPane.showMessageDialog(null,"Hallo "+n+"! pasti umurmu "+c+" tahun yaa");
+	}
+}
