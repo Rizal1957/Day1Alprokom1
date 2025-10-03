@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Berapa nilai ujianmu ?");
+        Scanner s=new Scanner (System.in);
+    
+        int a=s.nextInt();
+        if (a>=86){
+            System.out.println("SELAMAT ANDA MENDAPAT NILAI SEMPURNA A :)");
+        }
+        if (a>=75){
+            System.out.println("Selamat anda mendapat nilai AB, pertahankan semangatmu!!");
+        }
+        else if (a>=66){
+            System.out.println("Selamat anda mendapat nilai B, Lebih semangat lagi yaa!");
+        }
+        else if(a>=61){
+            System.out.println("Selamat anda mendapat nilai Bc, Lebih semangat lagi!!");
+        }
+        else if(a>=50){
+            System.out.println("Nilaimu C, Yang bener dong!!");
+        }
+        else if(a>=40){
+            System.out.println("Nilaimu D nihh, Dasar ganiat!!");
+        }
+        else System.out.println("Anda mendapat nilai E, Selamat anda akan di DO:)");
+    }
+}
