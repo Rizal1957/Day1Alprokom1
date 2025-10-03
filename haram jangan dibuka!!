@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        
+        System.out.println("Masukkan nama anda : ");
+        String n=s.nextLine();
+        
+        System.out.println("Masukkan NRP anda : ");
+        double x=s.nextDouble();
+        s.nextLine();
+        
+        System.out.println("Masukkan Jurusan anda : ");
+        String j=s.nextLine();
+        
+        double k1=(x/1000000);
+        int k2 = (int) k1;
+        
+        double t2=x/10000;
+        double t1=(int) t2;
+        double t=t1-k2;
+        int t5= (int) t;
+        
+        System.out.println("Berikut adalah data mahasiswa anda");
+        System.out.println("Nama : "+n);
+        System.out.println("NRP : "+x);
+        System.out.println("Jurusan : ");
+        System.out.println("Kode Departemen : "+k2);
+        System.out.println("Tahun Masuk : 20"+t);
+    }
+}
