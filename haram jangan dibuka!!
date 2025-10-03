@@ -1,6 +1,8 @@
+package apayaa;
 import java.util.Scanner;
 
-class Main {
+public class ApaYaa {
+	
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         
@@ -8,7 +10,7 @@ class Main {
         String n=s.nextLine();
         
         System.out.println("Masukkan NRP anda : ");
-        double x=s.nextDouble();
+        long x=s.nextLong();
         s.nextLine();
         
         System.out.println("Masukkan Jurusan anda : ");
@@ -17,16 +19,15 @@ class Main {
         double k1=(x/1000000);
         int k2 = (int) k1;
         
-        double t2=x/10000;
-        double t1=(int) t2;
-        double t=t1-k2;
-        int t5= (int) t;
+        int t1=(int)x;
+        long t2=t1-5002000000;
+        double t3=t2/10000;
         
         System.out.println("Berikut adalah data mahasiswa anda");
         System.out.println("Nama : "+n);
         System.out.println("NRP : "+x);
-        System.out.println("Jurusan : ");
+        System.out.println("Jurusan : "+j);
         System.out.println("Kode Departemen : "+k2);
-        System.out.println("Tahun Masuk : 20"+t);
+        System.out.println("Tahun Masuk : 20"+Math.round(t3));
     }
 }
