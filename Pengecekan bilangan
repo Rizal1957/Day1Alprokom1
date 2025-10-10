@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.print("Masukkan suatu angka :");
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        
+        if (n % 2 == 0) {
+            System.out.println("Bilangan " + n + " adalah bilangan genap");
+        } else {
+            System.out.println("Bilangan " + n + " adalah bilangan ganjil");
+        }
+        
+        if (n > 0) {
+            System.out.println("Bilangan " + n + " adalah bilangan positif");
+        } else System.out.println("Bilangan " + n + " adalah bilangan negatif");
+        
+        double akar = Math.sqrt(n);
+        if (akar == (int) akar) {
+            System.out.println("Bilangan " + n + " adalah bilangan kuadrat sempurna");
+        } else System.out.println("Bilangan " + n + " bukan bilangan kuadrat sempurna");
+    }
+}
