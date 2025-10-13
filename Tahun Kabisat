@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Masukkan nilai tahun : ");
+        int a=s.nextInt();
+        
+        if (a%4==0&&a%100!=0){
+            System.out.println("Maka tahun "+a+" adalah tahun kabisat");
+        }else if (a%400==0){
+            System.out.println("Maka tahun "+a+" adalah tahun kabisat");
+        }else System.out.println("Maka tahun "+a+" bukanlah tahun kabisat");
+    }
+}
