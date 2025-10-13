@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Masukkan nilai sisi 1 : ");
+        int a = s.nextInt();
+
+        System.out.print("Masukkan nilai sisi 2 : ");
+        int b = s.nextInt();
+
+        System.out.print("Masukkan nilai sisi 3 : ");
+        int c = s.nextInt();
+
+        if (a + b <= c && a + c <= b && b + c <= a) {
+
+            if (a == b && b == c) {
+                System.out.println("Maka ketiga sisi tersebut membentuk segitiga sama sisi");
+            } else if (a == b || a == c || b == c) {
+                System.out.println("Maka ketiga sisi tersebut membentuk segitiga sama kaki");
+            } else {
+                System.out.println("Maka ketiga sisi tersebut membentuk segitiga sembarang");
+            }
+
+        } else {
+            System.out.println("Maka ketiga sisi tersebut tidak membentuk segitiga");
+        }
+    }
+}
