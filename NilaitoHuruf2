@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Masukkan nama anda : ");
+        String n = s.nextLine();
+
+        System.out.print("Masukkan nilai ujianmu : ");
+        int a = s.nextInt();
+        s.nextLine();
+
+        System.out.print("Masukkan Nama Mata kuliah anda : ");
+        String m = s.nextLine();
+
+        String h;
+
+        if (a >= 86) {
+            h = "A";
+        } else if (a >= 76) {
+            h = "AB";
+        } else if (a >= 66) {
+            h = "B";
+        } else if (a >= 61) {
+            h = "BC";
+        } else if (a >= 56) {
+            h = "C";
+        } else if (a >= 41) {
+            h = "D";
+        } else {
+            h = "E";
+        }
+
+        System.out.println("Saya bernama " + n + " mendapatkan nilai " + nilaiHuruf +" di mata kuliah " + m);
+    }
+}
