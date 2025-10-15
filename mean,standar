@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Anda ingin menginput berapa bilangan? ");
+        int x = s.nextInt();
+        
+        int[] data = new int[x]; // Simpan data untuk perhitungan SD
+        double sum = 0;
+        
+        System.out.println("Baik, masukkan " + x + " angka:");
+        for (int i = 0; i < x; i++) {
+            System.out.print("Angka ke-" + (i + 1) + ": ");
+            data[i] = s.nextInt();
+            sum += data[i];
+        }
+        
+        double mean = sum / x;
+        
+        double jm = 0;
+        for (int i = 0; i < x; i++) {
+            double m = data[i] - mean;
+            jm += Math.pow(m,2);
+        }
+        
+        double sd = Math.sqrt(jm / (x - 1)); // Standar Deviasi sampel
+        
+        System.out.println("Maka rata-rata dari data di atas adalah : " + mean);
+        System.out.println("Maka standar deviasi dari data di atas adalah : " + sd);
+    }
+}
