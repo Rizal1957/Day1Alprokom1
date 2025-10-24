@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Masukkan sebuah nilai: ");
+        int i = s.nextInt();
+        int x=0;
+
+        for (int j = 1; j <= i; j++) {
+            for (int k = 1; k <= j; k++) {
+                x+=2;
+                System.out.print(x + " ");
+            }
+            System.out.println();
+        }
+    }
+}
