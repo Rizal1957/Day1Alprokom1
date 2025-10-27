@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s=new Scanner(System.in);
+	    System.out.print("Jumlah peserta yang akan diambil dari region 1 adalah : ");
+	    int k=s.nextInt();
+	    System.out.print("Total peserta yang diambil adalah : ");
+	    int n=s.nextint();
+        double p=
+        System.out.println("Total Semifinalis : ");
+        System.out.println("Total Semifinalis dari region 1 : ");
+        System.out.println("Total diambilnya "+k+"peserta dari region 1 adalah : "+p);
+	}
+}
