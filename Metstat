@@ -1,80 +1,45 @@
 import java.util.Scanner;
-public class Main
-{
-	public static void main(String[] args) {
-	    Scanner s=new Scanner(System.in);
-	    System.out.print("Jumlah peserta yang akan diambil dari region 1 adalah : ");
-	    int k=s.nextInt();//total peserta diambil region 1;
-        long faktorial = 1;
-        for (int i = 1; i <= k; i++) {
-        faktorial *= i; *= i; // k faktorial;
-        long fk=faktorial;
-        }
-	    
-	    System.out.print("Total peserta yang diambil adalah : ");
-	    int n=s.nextint();//total peserta diambil;
-	    long faktorial = 1;
-        for (int i = 1; i <= n; i++) {
-        faktorial *= i; *= i; // 2290 faktorial;
-        long fn=faktorial;
-        }
-	    
-	    int N=2290;//total peserta;
-        long faktorial = 1;
-        for (int i = 1; i <= N; i++) {
-        f2290 *= i; // 2290 faktorial;
-        long fN=faktorial;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int M = 878; 
+        int N = 2290; 
+
+        System.out.print("Masukkan total semifinalis (n): ");
+        int n = input.nextInt();
+
+        System.out.print("Masukkan semifinalis dari Region Offline 1 (k): ");
+        int k = input.nextInt();
+
+        // Validasi input sesuai ketentuan
+        if (k < 1 || k > 20 || n < k || n > 60) {
+            System.out.println("Input tidak valid! Pastikan 1 ≤ k ≤ 20 dan k ≤ n ≤ 60");
+            return;
         }
 
-	    int M=878;//total peserta region 1;
-        long faktorial = 1;
-        for (int i = 1; i <= M; i++) {
-        faktorial *= i;// 878 faktorial;
-        long fM=faktorial;
+        double Mk = kombinasi(M, k);
+        double NMnk = kombinasi(N - M, n - k);
+        double Nn = kombinasi(N, n);
+
+        double peluang = (Mk * NMnk) / Nn;
+
+        System.out.printf("Peluang diambilnya %d peserta dari Region Offline 1 adalah: %.6f\n", k, peluang);
+    }
+
+    static double kombinasi(int n, int r) {
+        if (r > n) return 0;
+        if (r == 0 || r == n) return 1;
+
+        r = Math.min(r, n - r); 
+        double hasil = 1.0;
+
+        for (int i = 1; i <= r; i++) {
+            hasil = hasil * (n - (r - i)) / i;
         }
-        
-        int Mk=M-k;
-        long faktorial = 1;
-        for (int i = 1; i <= Mk; i++) {
-        faktorial *= i; // mk faktorial;
-        long fMk=faktorial;
-        }
-	    
-	    int NM=N-M;// total jumlah peserta-total peserta region 1;
-        long faktorial = 1;
-        for (int i = 1; i <= NM; i++) {
-        fNM *= i; // 1412 faktorial;
-        long fNM=faktorial;
-        }
-	    
-	    int nk=n-k;// total jumlah peserta diambil-total peserta diambil region 1;
-        long faktorial = 1;
-        for (int i = 1; i <= nk; i++) {
-        faktorial *= i;// nk faktorial;
-        long fnk=faktorial
-        }
-	    
-	    int Nk=NM-nk;// total jumlah peserta diambil-total peserta diambil region 1;
-        long faktorial = 1;
-        for (int i = 1; i <= Nk; i++) {
-        faktorial *= i;// nk faktorial;
-        long fNk=faktorial;
-        }
-	    
-	    int Nn=N-n;// total jumlah peserta -total peserta diambil;
-        long faktorial = 1;
-        for (int i = 1; i <= Nn; i++) {
-        faktorial *= i;// Nn faktorial;
-        long fNn=faktorial;
-        }
-	    
-	    long x=f878/(fk*fmk);//kombinasi 878 dan k;
-	    long y=;//kombinasi N-M dan n-k
-	    long z=kombinasi N dan n;
-        double p=x*y/z;
-        
-        System.out.println("Total Semifinalis : "+n);
-        System.out.println("Total Semifinalis dari region 1 : "+k);
-        System.out.println("Total diambilnya "+k+"peserta dari region 1 adalah : "+p);
-	}
+
+        return hasil;
+    }
 }
