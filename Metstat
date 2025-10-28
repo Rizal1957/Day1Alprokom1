@@ -7,7 +7,16 @@ public class Main
 	    int k=s.nextInt();
 	    System.out.print("Total peserta yang diambil adalah : ");
 	    int n=s.nextint();
-        double p=
+	    int N=2290;
+	    int M=878;
+	    int NM=N-M;
+	    int nk=n-k;
+	    
+	    long x=kombinasi 878 dan k;
+	    long y=kombinasi N-M dan n-k;
+	    long z= kombinasi N dan n;
+        double p=x*y/z;
+        
         System.out.println("Total Semifinalis : ");
         System.out.println("Total Semifinalis dari region 1 : ");
         System.out.println("Total diambilnya "+k+"peserta dari region 1 adalah : "+p);
