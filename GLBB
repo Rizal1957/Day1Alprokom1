@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double g = 9.8; // percepatan gravitasi m/s^2
+        double h = 50;  // tinggi awal (meter)
+        double m = 0.171; // massa ponsel 171 gram -> 0.171 kg
+
+        System.out.print("Masukkan nilai perubahan waktu (dalam detik): ");
+        double dt = input.nextDouble();
+
+        double t = 0.0; // waktu awal
+        double v, Ek, Ep, Em, ht;
+
+        System.out.println("------------------------------------------------------------");
+        System.out.println("t\tv\tEk\tEp\tEm\tht");
+        System.out.println("------------------------------------------------------------");
+
+        while (true) {
+            v = g * t;              // kecepatan jatuh
+            Ek = 0.5 * m * v * v;   // energi kinetik
+            ht = h - (0.5 * g * t * t); // tinggi dari tanah
+            if (ht < 0) ht = 0;     // tidak boleh negatif
+            Ep = m * g * ht;        // energi potensial
+            Em = Ek + Ep;           // energi mekanik
+
+            System.out.printf("%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\n",
+                    t, v, Ek, Ep, Em, ht);
+
+            if (ht <= 0) break; // stop kalau sudah sampai tanah
+
+            t += dt;
+        }
+
+        System.out.println("------------------------------------------------------------");
+    }
+}
