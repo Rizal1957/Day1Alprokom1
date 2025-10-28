@@ -4,21 +4,77 @@ public class Main
 	public static void main(String[] args) {
 	    Scanner s=new Scanner(System.in);
 	    System.out.print("Jumlah peserta yang akan diambil dari region 1 adalah : ");
-	    int k=s.nextInt();
-	    System.out.print("Total peserta yang diambil adalah : ");
-	    int n=s.nextint();
-	    int N=2290;
-	    int M=878;
-	    int NM=N-M;
-	    int nk=n-k;
+	    int k=s.nextInt();//total peserta diambil region 1;
+        long faktorial = 1;
+        for (int i = 1; i <= k; i++) {
+        faktorial *= i; *= i; // k faktorial;
+        long fk=faktorial;
+        }
 	    
-	    long x=kombinasi 878 dan k;
-	    long y=kombinasi N-M dan n-k;
-	    long z= kombinasi N dan n;
+	    System.out.print("Total peserta yang diambil adalah : ");
+	    int n=s.nextint();//total peserta diambil;
+	    long faktorial = 1;
+        for (int i = 1; i <= n; i++) {
+        faktorial *= i; *= i; // 2290 faktorial;
+        long fn=faktorial;
+        }
+	    
+	    int N=2290;//total peserta;
+        long faktorial = 1;
+        for (int i = 1; i <= N; i++) {
+        f2290 *= i; // 2290 faktorial;
+        long fN=faktorial;
+        }
+
+	    int M=878;//total peserta region 1;
+        long faktorial = 1;
+        for (int i = 1; i <= M; i++) {
+        faktorial *= i;// 878 faktorial;
+        long fM=faktorial;
+        }
+        
+        int Mk=M-k;
+        long faktorial = 1;
+        for (int i = 1; i <= Mk; i++) {
+        faktorial *= i; // mk faktorial;
+        long fMk=faktorial;
+        }
+	    
+	    int NM=N-M;// total jumlah peserta-total peserta region 1;
+        long faktorial = 1;
+        for (int i = 1; i <= NM; i++) {
+        fNM *= i; // 1412 faktorial;
+        long fNM=faktorial;
+        }
+	    
+	    int nk=n-k;// total jumlah peserta diambil-total peserta diambil region 1;
+        long faktorial = 1;
+        for (int i = 1; i <= nk; i++) {
+        faktorial *= i;// nk faktorial;
+        long fnk=faktorial
+        }
+	    
+	    int Nk=NM-nk;// total jumlah peserta diambil-total peserta diambil region 1;
+        long faktorial = 1;
+        for (int i = 1; i <= Nk; i++) {
+        faktorial *= i;// nk faktorial;
+        long fNk=faktorial;
+        }
+	    
+	    int Nn=N-n;// total jumlah peserta -total peserta diambil;
+        long faktorial = 1;
+        for (int i = 1; i <= Nn; i++) {
+        faktorial *= i;// Nn faktorial;
+        long fNn=faktorial;
+        }
+	    
+	    long x=f878/(fk*fmk);//kombinasi 878 dan k;
+	    long y=;//kombinasi N-M dan n-k
+	    long z=kombinasi N dan n;
         double p=x*y/z;
         
-        System.out.println("Total Semifinalis : ");
-        System.out.println("Total Semifinalis dari region 1 : ");
+        System.out.println("Total Semifinalis : "+n);
+        System.out.println("Total Semifinalis dari region 1 : "+k);
         System.out.println("Total diambilnya "+k+"peserta dari region 1 adalah : "+p);
 	}
 }
