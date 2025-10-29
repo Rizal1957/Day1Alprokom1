@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int rahasia = 8;
+        int jawaban;
+
+        System.out.println("Tebak angka 1-10");
+
+        for (int i = 1; i <= 5; i++) {
+            System.out.print("Masukkan angka: ");
+            jawaban = s.nextInt();
+
+            if (jawaban == rahasia) {
+                System.out.println("Selamat! Tebakanmu benar!");
+                break;
+            } else {
+                System.out.println("Tebakanmu salah, coba lagi!");
+            }
+
+            if (i == 5) {
+                System.out.println("Kamu gagal :(");
+            }
+        }
+
+        s.close();
+    }
+}
