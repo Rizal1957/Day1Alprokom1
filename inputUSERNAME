@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String usn = "alpro1";
+        String pwd = "12345";
+
+        System.out.println("Silahkan input username anda:");
+        String username = input.next();
+
+        if (username.isEmpty()) {
+            System.out.println("Username tidak boleh kosong");
+            return;
+        }
+
+        if (!username.equals(usn)) {
+            System.out.println("Username anda tidak terdaftar");
+            return;
+        }
+
+        System.out.println("Masukkan password:");
+        String password = input.next();
+
+        if (password.isEmpty()) {
+            System.out.println("Password tidak boleh kosong");
+            return;
+        }
+
+        if (!password.equals(pwd)) {
+            System.out.println("Password anda salah");
+            return;
+        }
+
+        System.out.println("Anda berhasil masuk!");
+    }
+}
