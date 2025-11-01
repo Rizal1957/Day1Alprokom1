@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Masukkan nilai n: ");
+        int n = s.nextInt();
+
+        int x = 0;  
+        int y = 1;   
+        int jumlah = 0; 
+        System.out.print("Deret Fibonacci (tidak termasuk kelipatan " + n + " dan total < 500): ");
+
+        while (jumlah < 500) {
+            if (x % n != 0) {
+                if (jumlah + x >= 500) {
+                    break; 
+                }
+                System.out.print(x + " ");
+                jumlah += x;
+            }
+            int z = x + y;
+            x = y;
+            y = z;
+        }
+
+        System.out.println("\nTotal penjumlahan deret yang ditampilkan: " + jumlah);
+    }
+}
