@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Masukkan nilai koefisien a, b, dan c pada persamaan garis 1 (a1 b1 c1): ");
+        int a1 = s.nextInt();
+        int b1 = s.nextInt();
+        int c1 = s.nextInt();
+
+        System.out.print("Masukkan nilai koefisien a, b, dan c pada persamaan garis 2 (a2 b2 c2): ");
+        int a2 = s.nextInt();
+        int b2 = s.nextInt();
+        int c2 = s.nextInt();
+
+        // Validasi input dalam rentang -100 sampai 100
+        if (a1 < -100 || a1 > 100 || b1 < -100 || b1 > 100 || c1 < -100 || c1 > 100 ||
+            a2 < -100 || a2 > 100 || b2 < -100 || b2 > 100 || c2 < -100 || c2 > 100) {
+            System.out.println("Input tidak valid! Pastikan semua nilai antara -100 hingga 100.");
+            s.close();
+            return;
+        }
+
+        // Hitung gradien masing-masing garis: y = (-a/b)x - (c/b)
+        double m1 = -1.0 * a1 / b1;
+        double m2 = -1.0 * a2 / b2;
+
+        String apa;
+
+        // Cek sejajar
+        if (m1 == m2) {
+            apa = "Sejajar";
+            System.out.println("Maka 2 garis tersebut " + apa + ".");
+        }
+        // Cek tegak lurus
+        else if (m1 * m2 == -1) {
+            apa = "Tegak Lurus";
+            System.out.println("Maka 2 garis tersebut " + apa + ".");
+        }
+        // Jika tidak sejajar dan tidak tegak lurus → berpotongan
+        else {
+            int determinan = a1 * b2 - a2 * b1;
+            double x = (b1 * c2 - b2 * c1) * 1.0 / determinan;
+            double y = (c1 * a2 - c2 * a1) * 1.0 / determinan;
+
+            double tanSudut = Math.abs((m1 - m2) / (1 + m1 * m2));
+            double sudut = Math.toDegrees(Math.atan(tanSudut));
+
+            apa = "Berpotongan";
+            System.out.printf("Maka 2 garis tersebut %s di titik (%.2f, %.2f) dan membentuk sudut sebesar %.2f%n",
+                              apa, x, y, sudut);
+        }
+
+        s.close();
+    }
+}
