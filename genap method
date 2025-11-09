@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+
+    // Method untuk mengecek apakah bilangan genap
+    static boolean genap(int x) {
+        // Gunakan operator modulus (%) dan kembalikan hasil boolean langsung
+        return x % 2 == 0;
+    }
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Masukkan sebuah bilangan untuk dicek apakah genap atau bukan: ");
+        int x = s.nextInt();
+
+        boolean p = genap(x);
+
+        if (p) {
+            System.out.println("Maka bilangan " + x + " adalah bilangan genap.");
+        } else {
+            System.out.println("Maka bilangan " + x + " bukanlah bilangan genap.");
+        }
+
+        s.close();
+    }
+}
