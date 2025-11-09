@@ -1,0 +1,33 @@
+public class Jarak2titik {
+
+    private static void cPoint(int[] x, int[] y) {
+        double minJarak = Double.MAX_VALUE;
+        int p1 = 0, p2 = 0;
+
+        // Hitung semua kombinasi dua titik
+        for (int i = 0; i < x.length - 1; i++) {
+            for (int j = i + 1; j < x.length; j++) {
+                double jarak = Math.sqrt(Math.pow(x[i] - x[j], 2) + Math.pow(y[i] - y[j], 2));
+                System.out.printf("Jarak titik (%d,%d) ke (%d,%d) = %.2f\n",
+                                  x[i], y[i], x[j], y[j], jarak);
+
+                // Simpan jarak terpendek
+                if (jarak < minJarak) {
+                    minJarak = jarak;
+                    p1 = i;
+                    p2 = j;
+                }
+            }
+        }
+
+        // Tampilkan hasil akhir
+        System.out.printf("\nJarak Euclid terpendek = %.2f antara titik (%d,%d) dan (%d,%d)\n",
+                          minJarak, x[p1], y[p1], x[p2], y[p2]);
+    }
+
+    public static void main(String[] args) {
+        int[] titikX = {2, 4, 6, 7, 8};
+        int[] titikY = {2, 4, 9, 5, 4};
+        cPoint(titikX, titikY);
+    }
+}
