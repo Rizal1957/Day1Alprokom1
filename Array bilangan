@@ -9,15 +9,15 @@ public class Main {
         System.out.println("Masukkan angka (ketik angka negatif untuk berhenti):");
         while (true) {
             int x = s.nextInt();
-            if (x < 0) break;   // sentinel (berhenti kalau negatif)
-            data.add(x);        // tambahkan ke ArrayList
+            if (x < 0) break;   // berhenti kalau negatif
+            data.add(x);
         }
 
         if (data.isEmpty()) {
             System.out.println("Tidak ada data yang dimasukkan!");
         } else {
-            int hasil = data.get(0); // anggap elemen pertama sebagai nilai awal tertinggi
-            int indeks = 0;          // simpan indeks maksimum
+            int hasil = data.get(0); 
+            int indeks = 0;         
 
             for (int i = 1; i < data.size(); i++) {
                 if (data.get(i) > hasil) {
@@ -26,9 +26,10 @@ public class Main {
                 }
             }
 
-            System.out.println("Data yang dimasukkan: " + data);
-            System.out.println("Jumlah data: " + data.size());
-            System.out.println("Maka nilai tertinggi adalah " + hasil + " dengan indeks ke-" + indeks);
+            System.out.println("Maka data yang dimasukkan adalah " + data + 
+                               " dengan banyak data: " + data.size());
+            System.out.println("Maka nilai tertinggi adalah " + hasil + 
+                               " dengan indeks ke-" + indeks);
         }
 
         s.close();
