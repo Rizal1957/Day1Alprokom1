@@ -1,11 +1,10 @@
 import java.util.Scanner;
-
 public class Main {
 
-    // Method untuk mengecek apakah bilangan genap
     static boolean genap(int x) {
-        // Gunakan operator modulus (%) dan kembalikan hasil boolean langsung
-        return x % 2 == 0;
+        if(x % 2 == 0){
+            return true;
+        }else return false;
     }
 
     public static void main(String[] args) {
