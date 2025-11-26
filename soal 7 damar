@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s=new Scanner(System.in);
+		
+		System.out.println("Masukkan Jumlah Data yang ingin anda input");
+		int n=s.nextInt();
+		System.out.println("Masukkan data yang ingin anda input");
+		String[]nama=new String[n];
+		int[]id=new int [n];
+		String[]telp=new String[n];
+		
+		for(int i=0;i<n;i++){
+		    nama[i]=s.next();
+		    telp[i]=s.next();
+		    id[i]=i+1;
+		}
+	
+	
+		System.out.println("[Daftar peserta terdaftar]");
+		System.out.println("-------------------------------");
+		System.out.println("| ID | Nama  |  No. Telepon |");
+		System.out.println("-------------------------------");
+		for(int i=0;i<n;i++){
+		    System.out.printf("| %-4d | %-5s | %-12s |\n",id[i],nama[i],telp[i]);
+		}
+	}
+}
