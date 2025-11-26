@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s=new Scanner(System.in);
+		System.out.print("Masukkan nilai massa benda : ");
+		double massa=s.nextDouble();
+		System.out.print("Masukkan nilai sudut bidang miring : ");
+		double sudut=s.nextDouble();
+		System.out.print("Masukkan nilai koefisien gesek benda : ");
+		double k=s.nextDouble();
+		
+		System.out.print("\n");
+		System.out.print("Maka didapat informasi berikut\n");
+		double w=massa*9.8;
+		double si=Math.toRadians(sudut);
+		double co=Math.toRadians(sudut);
+		double fpar=w*Math.sin(si);
+		double n=w*Math.cos(co);
+		double fk=k*n;
+		double f=fpar-fk;
+		double a=f/massa;
+		
+		System.out.printf("Gaya berat yang dialami benda adalah %2f\n",w2);
+		System.out.printf("Gaya normal yang dialami benda adalah %2f\n",n2);
+		System.out.printf("Gaya gesek yang dialami komputer adalah %2f\n",fk2);
+		System.out.printf("Gaya paralel yang dialami benda adalah %2f\n",fpar2);
+		System.out.printf("Percepatan benda adalah %2f\n",a2);
+	}
+}
