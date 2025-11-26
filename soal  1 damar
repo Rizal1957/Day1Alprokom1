@@ -21,10 +21,10 @@ public class Main
 		double f=fpar-fk;
 		double a=f/massa;
 		
-		System.out.printf("Gaya berat yang dialami benda adalah %2f\n",w2);
-		System.out.printf("Gaya normal yang dialami benda adalah %2f\n",n2);
-		System.out.printf("Gaya gesek yang dialami komputer adalah %2f\n",fk2);
-		System.out.printf("Gaya paralel yang dialami benda adalah %2f\n",fpar2);
-		System.out.printf("Percepatan benda adalah %2f\n",a2);
+		System.out.printf("Gaya berat yang dialami benda adalah %.2f\n",w);
+		System.out.printf("Gaya normal yang dialami benda adalah %.2f\n",n);
+		System.out.printf("Gaya gesek yang dialami komputer adalah %.2f\n",fk);
+		System.out.printf("Gaya paralel yang dialami benda adalah %.2f\n",fpar);
+		System.out.printf("Percepatan benda adalah %.2f\n",a);
 	}
 }
