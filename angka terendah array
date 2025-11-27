@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner s=new Scanner(System.in);
+	System.out.print("Masukkan banyak bilangan yang akan kamu inputkan : ");
+	int n=s.nextInt();
+	int[]arr=new int [n];
+	System.out.print("Masukkan angka sebanyak "+n +":");
+	for(int i=0;i<n;i++){
+	    arr[i]=s.nextInt();
+	}
+	System.out.println("Maka angka terendah dari beberapa angka yang kamu masukan berada di indeks ke "+CariIndeksMIN(arr));
+	}
+	
+	public static int CariIndeksMIN(int[]x){
+	    int indeks=0;
+	    int terendah=x[0];
+	    for(int i=1;i<x.length;i++){
+	        if(x[i]<terendah){
+	            terendah=x[i];
+	            indeks=i+1;
+	        }
+	    }
+	    return indeks;
+	}
+}
