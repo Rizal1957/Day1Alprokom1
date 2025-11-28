@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.print("Masukkan nilai tahun kabisat :");
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		
+		 if ((n % 400 == 0) || (n % 4 == 0 && n % 100 != 0)) {
+           System.out.print("Kamu ingin mencari tahun kabisat ke berapa setelah ini? ");
+	    	int a=s.nextInt();
+            int kabisat2=n+4*a;
+	    	System.out.println("Maka tahun kabisat akan terjadi ke-"+a+" kalinya setelah ini adalah pada tahun "+kabisat2);
+        } else {
+            System.out.println("Maka tahun " + n + " bukanlah tahun kabisat");
+        }
+	}
+}
