@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Masukkan sebuah bilangan: ");
+        int n = s.nextInt();
+
+        int temp = Math.abs(n);
+        int count = 0;
+        int sum = 0;
+        int ganjil = 0;
+        int genap = 0;
+        int maxDigit = -1;
+        int minDigit = 10;
+
+        while (temp > 0) {
+            int digit = temp % 10;
+
+            count++;
+
+            sum += digit;
+
+            if (digit % 2 == 0) genap++;
+            else ganjil++;
+
+            if (digit > maxDigit) maxDigit = digit;
+            if (digit < minDigit) minDigit = digit;
+
+            temp /= 10;
+        }
+
+        double rata = count > 0 ? (double) sum / count : 0;
+
+        System.out.println("\n=== HASIL ANALISIS DIGIT ===");
+        System.out.println("Jumlah digit        : " + count);
+        System.out.println("Jumlah semua digit  : " + sum);
+        System.out.println("Rata-rata digit     : " + rata);
+        System.out.println("Jumlah digit ganjil : " + ganjil);
+        System.out.println("Jumlah digit genap  : " + genap);
+        System.out.println("Digit maksimum      : " + maxDigit);
+        System.out.println("Digit minimum       : " + minDigit);
+    }
+}
