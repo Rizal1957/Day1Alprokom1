@@ -1,0 +1,66 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.print("Masukkan jumlah transaksi : ");
+		int n=s.nextInt();
+		double[]totalbelanja=new double[n];
+		String[]statusmember=new String[n];
+		
+		for(int i=0;i<n;i++){
+		    int transaksi=i+1;
+		    
+		    System.out.print("\nTransaksi "+transaksi+" - Total Belanja : Rp.");
+		    totalbelanja[i]=s.nextDouble();
+		    s.nextLine();
+		    System.out.print("Status member (ya/tidak) : ");
+		    statusmember[i]=s.nextLine();
+		}
+		
+		for(int i=0;i<n;i++){
+		    int transaksi=i+1;
+		    System.out.println("\n==== Transaksi "+transaksi+" ====");
+		    int awal=(int)totalbelanja[i];
+		    System.out.println("Total belanja awal : Rp."+awal);//total belanja awal
+		    
+		    int diskon=0;
+		    if(totalbelanja[i]>=500000){
+		        diskon=20;
+		    }else if(totalbelanja[i]>=200000){
+		        diskon=10;
+		    }else if(totalbelanja[i]>=100000){
+		        diskon=5;
+		    }else {diskon=0;}
+		    
+		    double diskonutama=totalbelanja[i]*diskon/100;
+		    int diskonutama2=(int)diskonutama;
+		    System.out.println("Diskon utama ("+diskon+"%) : Rp."+diskonutama2);//diskon utama
+		    
+		    int diskonmember=0;
+		    if(statusmember[i].equals("ya")){
+		        diskonmember=2;
+		    }else {diskonmember=0;}
+		    
+		    double diskontambahan=(totalbelanja[i]-diskonutama)*diskonmember/100;
+		    int diskontambahan2=(int)diskontambahan;
+		    System.out.println("Diskon member ("+diskonmember+"%) :Rp."+diskontambahan2);//diskon member
+		    
+		    double cashback=0;
+		    if(statusmember[i].equals("ya")&&totalbelanja[i]>=200000){
+		        cashback=5000;
+		    }else {cashback=0;}
+		    int cashback2=(int)cashback;
+		    System.out.println("Cashback : Rp."+cashback2);//cashback
+		    
+		    double totalbaru=totalbelanja[i]-diskonutama-diskontambahan+cashback;
+		    double ppn=totalbaru*11/100;
+		    int ppn11=(int)ppn;
+		    System.out.println("PPN 11% : Rp."+ppn11);//ppn 11%
+		    
+		    double akhirbanget=totalbelanja[i]-diskonutama-diskontambahan+cashback-ppn;
+		    int totalbayar=(int)akhirbanget;
+		    System.out.println("Total bayar : Rp."+totalbayar);//total bayar
+		}
+	}
+}
