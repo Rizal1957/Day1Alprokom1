@@ -1,0 +1,19 @@
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println(Volume(6,5,4));
+		Luas(6,5,4);
+	}
+	
+	public static String Volume(int x,int y, int z){
+	    int v=x*y*z;
+	    String hasil="volume : "+v;
+	    
+	    return hasil;
+	}
+	
+	public static void Luas(int x,int y,int z){
+	    int l=2*(x*y+y*z+x*z);
+	    System.out.println("Luas permukaan balok : "+l);
+	}
+}
