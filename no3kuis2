@@ -10,15 +10,20 @@ public class Main
 		for(int i=0;i<n;i++){
 		    angka[i]=s.nextInt();
 		}
-		int indeks=0;
-	    int hasil=angka[0];
-		for(int i=1;i<n;i++){
-		    if(angka[i]<hasil){
-		        hasil=angka[i];
-		        indeks=++i;
-		    }
-		}
 		
+		int indeks=CariIndeksMin(angka);
 		System.out.println("Maka angka terendah dari beberapa angka yang kamu masukkan berada pada urutan : "+indeks);
+	}
+	
+	public static int CariIndeksMin(int[]x){
+	    int hasil=x[0];
+	    int index=0;
+	    for(int i=1;i<x.length;i++){
+	        if(x[i]<hasil){
+	            hasil=x[i];
+	            index=++i;
+	        }
+	    }
+	    return index;
 	}
 }
