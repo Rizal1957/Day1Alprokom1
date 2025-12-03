@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Masukkan sebuah kalimat: ");
+        String kalimat = s.nextLine();
+
+        kalimat = kalimat.toLowerCase();
+
+        int jumlahVokal = 0;
+
+        for (int i = 0; i < kalimat.length(); i++) {
+            char c = kalimat.charAt(i);
+
+            if (c == 'a' || c == 'i' || c == 'u' || c == 'e' || c == 'o') {
+                jumlahVokal++;
+            }
+        }
+
+        System.out.println("Jumlah huruf vokal dalam kalimat tersebut adalah: " + jumlahVokal);
+    }
+}
