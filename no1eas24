@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+
+    static int kali(int m, int n) {
+        if (n == 0) {
+            return 0;
+        }
+        return m + kali(m, n - 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.print("Masukkan suatu bilangan non negatif: ");
+        int m=s.nextInt();
+        if(m<0){
+            System.out.println("Bilangan yang anda masukkan tidak valid");
+        }
+        System.out.print("Anda akan mengalikan bilangan "+m+" dengan bilangan berapa : ");
+        int n=s.nextInt();
+        if(n<0){
+            System.out.println("Bilangan yang anda masukkan tidak valid");
+        }
+
+        System.out.println("Hasil " + m + " x " + n + " = " + kali(m, n));
+    }
+}
