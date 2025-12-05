@@ -1,0 +1,19 @@
+public class Main
+{
+	public static void main(String[] args) {
+	char []kata={'U','T','E','P'};
+	System.out.println(p(kata,0,kata.length-1));
+	}
+	
+	public static boolean p(char[]s,int i,int f){
+	    if(i<f){
+	        if(s[i]==s[f]){
+	            return p(s,i+1,f-1);
+	        }else{
+	            return false;
+	        } 
+	    }else {
+	        return false;
+	    }
+	}
+}
